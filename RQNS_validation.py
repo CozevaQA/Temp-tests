@@ -3,7 +3,7 @@ from os import listdir
 from os.path import isfile, join
 
 onlyfiles = [f for f in listdir("Assets") if isfile(join("Assets", f))]
-print(onlyfiles)
+#print(onlyfiles)
 manifestFileName=""
 
 for x in onlyfiles:
@@ -11,7 +11,7 @@ for x in onlyfiles:
         manifestFileName = x
         break
 
-print(manifestFileName)
+#print(manifestFileName)
 
 wb = load_workbook("Assets\\"+manifestFileName)
 
@@ -20,7 +20,7 @@ ws = wb.active
 Listicle = list(ws.values)
 
 onlyfiles = [f for f in listdir("Assets\\Extracted PDF Files") if isfile(join("Assets\Extracted PDF Files", f))]
-print(onlyfiles)
+#print(onlyfiles)
 
 total_count_arr = []
 for i in range(0,len(Listicle)):
@@ -39,10 +39,12 @@ for x in Listicle:
 iterator1 =0
 
 
-
+correct_count = 0
 for x in Listicle:
     if x[1] == "CMSMemberID":
         continue
+    if x[8] == None:
+        break
     if int(x[9]) == total_count_arr[iterator1]:
         print(str(x[8])+" : "+str(int(x[9]))+" : "+str(total_count_arr[iterator1])+" : PASSED")
     else:
