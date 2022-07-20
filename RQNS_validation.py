@@ -43,6 +43,7 @@ correct_count = 0
 for x in Listicle:
     if x[1] == "CMSMemberID":
         continue
+
     if x[8] == None:
         break
     if int(x[9]) == total_count_arr[iterator1]:
