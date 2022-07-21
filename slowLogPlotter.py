@@ -213,6 +213,8 @@ def build_time_array(filearray, progress, root, date_diff):
             traceback.print_exc()
             print("NEED TO REMOVE:"+name[-10:-4])
             date_array.remove(name[-10:-4])
+            querytime.clear()
+            timestamp.clear()
             continue
 
 
