@@ -1,3 +1,5 @@
+import os
+
 from openpyxl import Workbook, load_workbook
 from os import listdir
 from os.path import isfile, join
@@ -34,6 +36,9 @@ for x in Listicle:
     for j in onlyfiles:
         if x[8] in j:
             total_count_arr[iterator1] += 1
+            #print(x[8])
+            #test = os.path.join("C:/Users/wdey/PycharmProjects/Temp-tests/Assets/Extracted PDF Files", j)
+            #os.remove(test)
     iterator1 += 1
 
 iterator1 =0
