@@ -94,7 +94,8 @@ def launch_gui():
         "ZipHealth.get_organisation_list_for_drop_down",
         "ZipHealth.get_API_details",
         "ZipHealth.unified_internal_external_provider_search",
-        "ZipHealth.user_email_notification"
+        "ZipHealth.user_email_notification",
+        "ZipHealth._care_opp_details"
 
     ]
     query_drop = OptionMenu(root, query_name_tem, *query_list)
